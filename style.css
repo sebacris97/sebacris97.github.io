@@ -5,8 +5,13 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: myFirstFont;
+    src: url(https://www.hubspot.com/hubfs/brand-kit-generator/prototype/fonts/ProzaLibre-Bold.ttf);
+}
+
 body {
-    font-family: Arial, sans-serif; /* Fuente principal */
+    font-family: myFirstFont; /* Fuente principal */
     padding: 20px; /* Espaciado interno */
 }
 
@@ -18,13 +23,15 @@ header {
     background: #1B1B3A; /* Color de fondo */
     color: white; /* Color de texto */
     padding: 10px 20px; /* Espaciado interno */
-	border-top-left-radius: 7px;	border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
 }
 
 #logo {
-  width: 10%;
-  height: 10%;
+  width:7%;heigth:7%;
   display: "inline";
+  loading: "lazy";
+  border-radius: 30px;
 }
 
 .icono-carrito {
@@ -54,8 +61,7 @@ nav ul li a {
 }
 
 nav ul li a:hover{
-background: #1B1B3A; /* Cambio de color al pasar el cursor */
-padding: 0.9%;
+color: #1B1B3A; /* Cambio de color al pasar el cursor */
 border-radius: 10px;
 }
 
@@ -83,16 +89,17 @@ color:#DF6C92 ;
 }
 
 .producto .precio {
-    color: green; /* Texto en color verde */
+    color: #555; /* Texto en color verde */
     font-size: 18px; /* Tamaño de fuente */
 }
 
 .producto button {
-    background: #333; /* Fondo oscuro */
+    background: #DF6C92; /* Fondo oscuro */
     color: white; /* Texto blanco */
     border: none; /* Sin bordes */
     padding: 10px 15px; /* Espaciado interno */
     cursor: pointer; /* Mano al pasar por encima */
+    border-radius: 7px;
 }
 
 .producto button:hover {
