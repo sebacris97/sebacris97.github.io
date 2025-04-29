@@ -29,21 +29,34 @@ header {
     border-top-right-radius: 7px;
 }
 
+
+#logohref {
+  display: inline-block;
+  position:relative;
+  width:10%;
+  heigth:10%;
+  text-align:center;
+}
+
 #logo {
-  width:22%;
-  heigth:22%;
+  width:90%;
+  heigth:90%;
   display: "inline";
   loading: "lazy";
   border-radius: 30px;
+  display: inline-block;
+  position:relative;
 }
 
 #logo:hover{
   content:url("./public/main-logo-black.webp");
-  width:22%;
-  heigth:22%;
+  width:90%;
+  heigth:90%;
   display: "inline";
   loading: "lazy";
   border-radius: 30px;
+  display: inline-block;
+  position:relative;
 }
 
 
