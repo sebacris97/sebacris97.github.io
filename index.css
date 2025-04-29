@@ -5,8 +5,8 @@
     box-sizing: border-box;
 }
 
-#formbutton-button{
-  background: #1B1B3A;
+#formbutton-button:hover{
+  background: #DF6C92 !important;
 }
 
 @font-face {
@@ -32,11 +32,22 @@ header {
 }
 
 #logo {
-  width:22%;heigth:22%;
+  width:22%;
+  heigth:22%;
   display: "inline";
   loading: "lazy";
   border-radius: 30px;
 }
+
+#logo:hover{
+  content:url("./public/main-logo-black.webp");
+  width:22%;
+  heigth:22%;
+  display: "inline";
+  loading: "lazy";
+  border-radius: 30px;
+}
+
 
 .icono-carrito {
     color: white; /* Color del icono */

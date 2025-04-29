@@ -1,6 +1,8 @@
 // Recuperar el carrito del almacenamiento local
 const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
+
+
 // Muestra los productos en el carrito
 const mostrarCarrito = () => {
     const lista = document.getElementById("lista-carrito");
@@ -23,17 +25,14 @@ const precio = carrito.reduce((acc, prod) => {
 }, {});
 console.log(conteo)
 console.log(precio)
-
-
-var a = Object.keys(conteo).map(nombre => ({
+const dict_as_array = Object.keys(conteo).map(nombre => ({
         nombre: nombre,
         value: conteo[nombre]
     })); //paso el diccionario a lista para poder recorrer
-console.log(a);
+console.log(dict_as_array);
 
 
-
-    a.forEach((item, indice) => {
+    dict_as_array.forEach((item, indice) => {
         const producto = document.createElement("article");
         producto.classList.add("producto");
         producto.innerHTML = `
@@ -72,9 +71,14 @@ const eliminarDelCarrito = (indice) => {
 
 // Simula la compra
 const realizarCompra = () => {
-    alert("Compra realizada con éxito");
-    localStorage.removeItem("carrito");
-    window.location.href = "index.html";
+    if (carrito.length !== 0){ 
+      alert("Compra realizada con éxito");
+      localStorage.removeItem("carrito");
+      window.location.href = "index.html";
+      return
+    }
+    alert("Debe agregar items para poder continuar")
+    return
 };
 
 // Inicializa el carrito al cargar la página

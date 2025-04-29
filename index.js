@@ -23,7 +23,6 @@ const agregarAlcarrito = (nombre,precio) =>{
 }
 
 
-
 // Guarda el contenido del carrito en el almacenamiento local antes de cerrar la pagina
 
 window.addEventListener("beforeunload",()=>{
