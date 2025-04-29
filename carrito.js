@@ -12,12 +12,35 @@ const mostrarCarrito = () => {
         return;
     }
 
-    carrito.forEach((item, indice) => {
+
+const conteo = carrito.reduce((acc, prod) => {
+  acc[prod.nombre] = (acc[prod.nombre] || 0) + 1;
+  return acc;
+}, {});
+const precio = carrito.reduce((acc, prod) => {
+  acc[prod.nombre] = prod.precio;
+  return acc;
+}, {});
+console.log(conteo)
+console.log(precio)
+
+
+var a = Object.keys(conteo).map(nombre => ({
+        nombre: nombre,
+        value: conteo[nombre]
+    })); //paso el diccionario a lista para poder recorrer
+console.log(a);
+
+
+
+    a.forEach((item, indice) => {
         const producto = document.createElement("article");
         producto.classList.add("producto");
         producto.innerHTML = `
             <h2>${item.nombre}</h2>
-            <p class="precio">$${item.precio}</p>
+	    <p class="cantidad">cantidad: ${conteo[item.nombre]}</p>
+            <p class="precio">precio unitario: $${precio[item.nombre]}</p>
+            <p class="precio">precio total: $${precio[item.nombre]*conteo[item.nombre]}</p>
             <button onclick="eliminarDelCarrito(${indice})">Eliminar</button>
         `;
         lista.appendChild(producto);

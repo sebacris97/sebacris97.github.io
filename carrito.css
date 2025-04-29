@@ -1,0 +1,187 @@
+/* --- Estilos básicos y reinicio de márgenes --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#formbutton-button{
+  background: #1B1B3A;
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(https://www.hubspot.com/hubfs/brand-kit-generator/prototype/fonts/ProzaLibre-Bold.ttf);
+}
+
+body {
+    font-family: myFirstFont; /* Fuente principal */
+    padding: 20px; /* Espaciado interno */
+}
+
+/* --- Encabezado (Header) --- */
+header {
+    border-radius: 10px;
+    display: flex; /* Distribución flexible */
+    justify-content: space-between; /* Elementos separados */
+    align-items: center; /* Alineación vertical */
+    background: #1B1B3A; /* Color de fondo */
+    color: white; /* Color de texto */
+    padding: 10px 20px; /* Espaciado interno */
+}
+
+#logo {
+  width:7%;heigth:7%;
+  display: "inline";
+  loading: "lazy";
+  border-radius: 30px;
+}
+
+.icono-carrito {
+    color: white; /* Color del icono */
+    font-size: 24px; /* Tamaño del icono */
+    text-decoration: none; /* Sin subrayado */
+}
+
+/* --- Navegación principal --- */
+
+
+
+/* --- Estilos de productos --- */
+.productos {
+    display: grid; /* Distribución en cuadrícula */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajuste automático */
+    gap: 20px; /* Separación entre productos */
+    margin-top: 20px; /* Margen superior */
+}
+
+
+
+.producto {
+border-color: #DF6C92; 
+border-width: 1px;
+border-style: solid;
+    background: #1B1B3A; /* Fondo claro */
+    padding: 15px; /* Espaciado interno */
+    text-align: center; /* Texto centrado */
+    color: white;
+}
+
+.producto h2 {
+    margin-bottom: 10px; /* Espacio inferior */
+color:#DF6C92 ;
+}
+
+.producto .precio {
+    color: #555; /* Texto en color verde */
+    font-size: 18px; /* Tamaño de fuente */
+}
+
+.producto button {
+    background: #DF6C92; /* Fondo oscuro */
+    color: white; /* Texto blanco */
+    border: none; /* Sin bordes */
+    padding: 10px 15px; /* Espaciado interno */
+    cursor: pointer; /* Mano al pasar por encima */
+    border-radius: 7px;
+}
+
+.producto button:hover {
+    background: #555; /* Cambio de color al pasar el cursor */
+}
+
+
+
+
+.volver {
+    color: white; /* Color de texto */
+    text-decoration: none; /* Sin subrayado */
+}
+
+.volver:hover{
+color: #DF6C92; /* Cambio de color al pasar el cursor */
+border-radius: 10px;
+}
+
+
+.arrow{
+  position:relative;
+  width:30px;
+  height: 30px;
+  cursor:pointer;
+/*   border:solid 1px white; */
+  transition:0.5s;
+  overflow:hidden;
+}
+
+.arrow:hover{
+/*  animation:borderAni 5s cubic-bezier(0, 0.6, 1, 0.4); */
+      border:solid 2px white; 
+    border-radius:50%;
+}
+.arrow:after{
+  position:absolute;
+  display:block;
+  content:"";
+  color:white;
+  width: 20px;
+  height: 15px;
+/*   border:solid 1px;  */
+  top:-1px;
+  border-bottom:solid 2px;
+  transform:translatex(4px);
+}
+
+.arrow:before{
+  position:absolute;
+  display:block;
+  content:"";
+  color:white;
+  width: 8px;
+  height: 8px;
+/*   border:solid 1px;  */
+  border-top:solid 2px;
+  border-left:solid 2px;
+  top:50%;
+  left:2px;
+  transform-origin:0% 0%;
+  transform:rotatez(-45deg);
+
+}
+.arrow:hover:before{
+ animation: aniArrow01 1s cubic-bezier(0, 0.6, 1, 0.4) infinite 0.5s;
+}
+
+.arrow:hover:after{
+ animation: aniArrow02 1s cubic-bezier(0, 0.6, 1, 0.4) infinite 0.5s;
+}
+
+
+@keyframes aniArrow01 {
+  0% {
+    transform:rotatez(-45deg) translateY(30px) translateX(30px);
+  }
+  100% {
+    transform: rotatez(-45deg) translateY(-35px) translateX(-35px);
+  }
+}
+
+
+@keyframes aniArrow02 {
+  0% {
+    transform:translateX(45px);
+  }
+  100% {
+    transform:translateX(-44px);
+  }
+}
+
+@keyframes borderAni{
+   0% {
+    border:solid 2px white;
+  }
+  100% {    
+    border:solid 2px white; 
+    border-radius:50%;
+  }
+}

@@ -10,6 +10,8 @@ const actualizarContador = ()=>{
 const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 actualizarContador()
 
+console.log(carrito)
+
 const agregarAlcarrito = (nombre,precio) =>{
     //agregar el producto como un objeto al carrito
     carrito.push({nombre,precio})

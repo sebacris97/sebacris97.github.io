@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+#formbutton-button{
+  background: #1B1B3A;
+}
+
 @font-face {
     font-family: myFirstFont;
     src: url(https://www.hubspot.com/hubfs/brand-kit-generator/prototype/fonts/ProzaLibre-Bold.ttf);
@@ -28,7 +32,7 @@ header {
 }
 
 #logo {
-  width:7%;heigth:7%;
+  width:22%;heigth:22%;
   display: "inline";
   loading: "lazy";
   border-radius: 30px;
