@@ -9,13 +9,11 @@
   background: #DF6C92 !important;
 }
 
-@font-face {
-    font-family: myFirstFont;
-    src: url(https://www.hubspot.com/hubfs/brand-kit-generator/prototype/fonts/ProzaLibre-Bold.ttf);
-}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Tuffy:ital,wght@0,400;0,700;1,400;1,700&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
 
 body {
-    font-family: myFirstFont; /* Fuente principal */
+    font-family: 'Open Sans',serif; /* Fuente principal */
     padding: 20px; /* Espaciado interno */
 }
 
